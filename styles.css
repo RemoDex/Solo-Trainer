@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 20px;
     position: relative; /* Para que o conteúdo fique acima do vídeo */
+    font-size: 22px; /* Aumenta o tamanho da fonte globalmente */
 }
 
 /* Estilo do Vídeo de Fundo */
