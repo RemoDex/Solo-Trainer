@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Solo Leveling Fitness</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="seu-video.mp4" type="video/mp4"> <!-- Substitua pelo caminho do seu vídeo -->
+        Seu navegador não suporta vídeos.
+    </video>
+
+    <div id="splash-screen">
+        <h1>Solo Leveling Fitness</h1>
+        <p>Prepare-se para elevar seu nível!</p>
+        <i class="fas fa-dumbbell fa-3x"></i>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>Relatório de Treinos</h1>
+            <p>Registre seus treinos e visualize seu progresso.</p>
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li><a class="nav-button" href="add-workout.html"><i class="fas fa-plus-circle"></i> Adicionar Treino</a></li>
+                    <li><a class="nav-button" href="workout-list.html"><i class="fas fa-list"></i> Lista de Treinos</a></li>
+                    <li><a class="nav-button" href="performance.html"><i class="fas fa-chart-line"></i> Desempenho</a></li>
+                    <li><a class="nav-button" href="report.html"><i class="fas fa-file-alt"></i> Relatórios</a></li>
+                </ul>
+            </nav>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

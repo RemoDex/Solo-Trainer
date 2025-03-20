@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Relatórios</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="seu-video.mp4" type="video/mp4"> <!-- Substitua pelo caminho do seu vídeo -->
+        Seu navegador não suporta vídeos.
+    </video>
+    <header>
+        <h1><i class="fas fa-file-alt"></i> Relatórios</h1>
+    </header>
+    <main>
+        <section>
+            <label for="start-date">Data de Início:</label>
+            <input type="date" id="start-date">
+            
+            <label for="end-date">Data de Fim:</label>
+            <input type="date" id="end-date">
+            
+            <button id="generate-report">Gerar Relatório Diário</button>
+            <button id="generate-weekly-report">Gerar Relatório Semanal</button>
+            <div id="report-output"></div>
+        </section>
+        <nav>
+            <a class="back-button" href="index.html">Voltar</a>
+        </nav>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* Estilos Gerais */
+* {
+    box-sizing: border-box; /* Para garantir que o padding e a borda não afetem a largura total */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Texto branco */
+    margin: 0;
+    padding: 20px;
+    position: relative; /* Para que o conteúdo fique acima do vídeo */
+}
+
+/* Estilo do Vídeo de Fundo */
+#background-video {
+    position: fixed; /* Fixa o vídeo na tela */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    object-fit: cover; /* Cobre toda a área */
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+}
+
+/* Estilo da Splash Screen */
+#splash-screen {
+    position: fixed; /* Fixa a tela de carregamento */
+    top: 0;
+    left: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(44, 62, 80, 0.9); /* Fundo escuro com transparência */
+    color: #ecf0f1; /* Cor do texto */
+    display: flex; /* Usando flexbox para centralizar */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    z-index: 9999; /* Coloca a splash screen acima de outros elementos */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+}
+
+/* Estilo do conteúdo principal */
+#main-content {
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+}
+
+/* Estilo do Cabeçalho */
+header {
+    text-align: center;
+    background-color: rgba(44, 62, 80, 0.8); /* Azul escuro com transparência */
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo do Main */
+main {
+    position: relative; /* Para que o conteúdo fique acima do vídeo */
+    z-index: 1; /* Garante que o conteúdo fique acima do vídeo */
+}
+
+/* Estilo dos Botões */
+button {
+    padding: 10px 20px;
+    background-color: #2d2d4b; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #000000; /* Cor do botão ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente ao passar o mouse */
+}
+
+/* Estilo da Navegação */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #ecf0f1; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Estilo da Lista de Treinos */
+.workout-list {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se movam para a próxima linha */
+    justify-content: center; /* Centraliza os cartões */
+    margin-top: 20px;
+}
+
+.workout-card {
+    background-color: rgba(52, 73, 94, 0.8); /* Fundo dos cartões */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px; /* Largura fixa para os cartões */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+}
+
+.workout-card:hover {
+    transform: scale(1.05); /* Aumenta o cartão levemente ao passar o mouse */
+}
+
+.workout-card h3 {
+    margin: 0 0 10px; /* Margem inferior para o título */
+}
+
+.workout-card p {
+    margin: 5px 0; /* Margem para os parágrafos */
+}
+
+/* Estilo da Tabela de Desempenho */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(44, 62, 80, 0.8); /* Azul escuro com transparência */
+}
+
+/* Estilo dos Relatórios */
+.report-card {
+    background-color: rgba(52, 73, 94, 0.8); /* Fundo dos cartões de relatório */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    button {
+        width: 100%; /* Botões ocupam toda a largura em telas pequenas */
+    }
+    .workout-card {
+        width: 100%;  /* Cartões ocupam toda a largura em telas pequenas */
+    }
+}
+
+/* Estilo dos Detalhes do Treino */
+.workout-detail-card {
+    background-color: rgba(44, 62, 80, 0.8); /* Fundo dos cartões de detalhes */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+.workout-detail-card h4 {
+    margin: 0 0 10px; /* Margem inferior para o título */
+    color: #ecf0f1; /* Cor do texto do título */
+}
+
+.workout-detail-card p {
+    margin: 5px 0; /* Margem para os parágrafos */
+    color: #bdc3c7; /* Cor do texto dos detalhes */
+}
+
+/* Estilo dos Inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 10px;
+    margin: 10px 0; /* Margem superior e inferior */
+    border: 1px solid #ccc; /* Borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    width: 100%; /* Largura total */
+}
+
+/* Efeito de foco nos Inputs */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    border-color: #27ae60; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.5); /* Sombra ao focar */
+}
+
+/* Estilo dos Rótulos */
+label {
+    color: #ecf0f1; /* Cor do texto do rótulo */
+    margin: 5px 0; /* Margem para os rótulos */
+    display: block; /* Faz com que o rótulo ocupe toda a largura */
+}
+
+/* Estilo do Botão de Voltar */
+.back-button {
+    display: inline-block; /* Para que o botão tenha um comportamento de bloco */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #3498db; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+/* Efeito de hover no botão de Voltar */
+.back-button:hover {
+    background-color: #102431; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente ao passar o mouse */
+}
